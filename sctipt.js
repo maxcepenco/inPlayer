@@ -1,5 +1,5 @@
 // const h1Element = document.createElement("h1");
-// h1Element.append("hellow from it");
+// h1Element.append("hello from it");
 
 // document.body.append(h1Element);
 // // ---------------------------------------
@@ -7,8 +7,8 @@
 const incubator = {
   title: "it",
   graduatesCount: 2000,
-  areYouChempion: true,
-  tehnologies: [
+  areYouChampion: true,
+  technologies: [
     {
       title: "Front",
     },
@@ -21,28 +21,28 @@ const incubator = {
   ],
 };
 
-// ------algoritm------------
+// ------------------algorism--------------
 let pageTitleElement = document.createElement("h1");
 pageTitleElement.innerHTML = incubator.title;
 document.body.append(pageTitleElement);
 
-let graduaceCountElement = document.createElement("input");
-graduaceCountElement.value = incubator.graduatesCount;
-document.body.append(graduaceCountElement);
+let graduateCountElement = document.createElement("input");
+graduateCountElement.value = incubator.graduatesCount;
+document.body.append(graduateCountElement);
 
-let areYouChempionelement = document.createElement("input");
-areYouChempionelement.type = "checkbox";
-areYouChempionelement.checked = incubator.areYouChempion;
-document.body.append(areYouChempionelement);
+let areYouChampionElement = document.createElement("input");
+areYouChampionElement.type = "checkbox";
+areYouChampionElement.checked = incubator.areYouChampion;
+document.body.append(areYouChampionElement);
 
 let techSelectElement = document.createElement("select");
 
 let techSelectOptions0Element = document.createElement("option");
-techSelectOptions0Element.append(incubator.tehnologies[0].title);
+techSelectOptions0Element.append(incubator.technologies[0].title);
 let techSelectOptions1Element = document.createElement("option");
-techSelectOptions1Element.append(incubator.tehnologies[1].title);
+techSelectOptions1Element.append(incubator.technologies[1].title);
 let techSelectOptions2Element = document.createElement("option");
-techSelectOptions2Element.append(incubator.tehnologies[2].title);
+techSelectOptions2Element.append(incubator.technologies[2].title);
 techSelectElement.append(
   techSelectOptions0Element,
   techSelectOptions1Element,
@@ -50,5 +50,8 @@ techSelectElement.append(
 );
 
 document.body.append(techSelectElement);
+
+
+
 
 
