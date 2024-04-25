@@ -1,0 +1,56 @@
+// Миксин для медиа-запросов с указанием ширины экрана
+@mixin responsive($min-width: null, $max-width: null) {
+
+    // Если задана только минимальная ширина
+    @if $min-width !=null and $max-width ==null {
+        @media (min-width: $min-width) {
+            @content;
+        }
+    }
+
+    // Если задана только максимальная ширина
+    @else if $min-width ==null and $max-width !=null {
+        @media (max-width: $max-width) {
+            @content;
+        }
+    }
+
+    // Если заданы и минимальная, и максимальная ширина
+    @else if $min-width !=null and $max-width !=null {
+        @media (min-width: $min-width) and (max-width: $max-width) {
+            @content;
+        }
+    }
+}
+
+
+
+
+
+@mixin md1($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+@mixin md2($width) {
+    @media (max-width: $width) {
+        // Здесь нет содержимого
+    }
+}
+
+@mixin md3($width) {
+    @media (min-width: $width) {
+        // Здесь нет содержимого
+    }
+}
+
+
+@mixin md4($width) {
+    @media (max-width: $width) {
+        @content;
+    }
+}
+
+
+
