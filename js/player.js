@@ -42,6 +42,8 @@ function renderPlayList(playlistForRendering) {
 // ------Логотип отрисовки шапки входного плейлиста------
 function renderPlayListHeader(playlistForRendering){
 	const playerHeader = document.querySelector('.player__header');
+	const playerHeaderInfo = document.querySelector('.player__header .player__header-info');
+
 
 	let playListImageElement = document.createElement('img');
 	playListImageElement.classList.add('player__header-image')
@@ -51,9 +53,11 @@ function renderPlayListHeader(playlistForRendering){
 	
 	let playlistTitleElement = document.createElement('h2')
 	playlistTitleElement.append(playlistForRendering.title);
-	playerHeader.append(playlistTitleElement);
+	playerHeaderInfo.appendChild(playlistTitleElement);
 
 	// document.body.append(playlistTitleElement);
+
+
 };
 
 // -----логика отрисовки входного трека------
@@ -83,5 +87,12 @@ function renderTrack(inputTrackForRendering){
 	playerTrackList.append(trekElement);
 };
 
+// функция для отображение текущей информации  о плейлисте и треке
+function renderPlaylistInfoHeader(currentTrack, totalTracksCount, playlistDuration){
 
+	
+
+	let currentTrackInfo = document.createElement('div');
+	currentTrackInfo.appendChild(``)
+}
 	
